@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>fan</groupId>
+        <artifactId>fancy-parent</artifactId>
+        <version>4.0.3</version>
+    </parent>
+    <artifactId>fancy-space</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <name>fancy-space</name>
+    <description>Personal website.</description>
+    <url>https://github.com/Fan223/fancy-space</url>
+    <licenses>
+        <license/>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>Fan</id>
+            <name>Fancy</name>
+            <email>fanj.zh@foxmail.com</email>
+            <url>https://fan223.cn</url>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/Fan223/fancy-space.git</connection>
+        <developerConnection>scm:git:git@github.com:Fan223/fancy-space.git</developerConnection>
+        <url>https://github.com/Fan223/fancy-space</url>
+    </scm>
+
+    <properties>
+        <revision>1.0.0</revision>
+    </properties>
+
+    <modules>
+        <module>fancy-gateway</module>
+        <module>fancy-services</module>
+    </modules>
+</project>
