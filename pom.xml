@@ -32,12 +32,58 @@
         <url>https://github.com/Fan223/fancy-space</url>
     </scm>
 
-    <properties>
-        <revision>1.0.0</revision>
-    </properties>
-
     <modules>
         <module>fancy-gateway</module>
         <module>fancy-services</module>
     </modules>
+
+    <properties>
+        <revision>1.0.0</revision>
+        <fancy-platform.version>1.0.0</fancy-platform.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-web-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-mybatis-plus-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-redis-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-jackson-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-log-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-validation-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-resource-server-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>fancy-admin-client-starter</artifactId>
+                <version>${fancy-platform.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
