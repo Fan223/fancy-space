@@ -1,6 +1,8 @@
 package fan.fancy.blog.converter;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import fan.fancy.blog.pojo.dto.ArticleDTO;
+import fan.fancy.blog.pojo.dto.CategoryDTO;
 import fan.fancy.blog.pojo.entity.ArticleDO;
 import fan.fancy.blog.pojo.entity.CategoryDO;
 import fan.fancy.blog.pojo.vo.ArticleVO;
@@ -20,20 +22,20 @@ import java.util.List;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface BlogConverter {
 
-    @Mapping(target = "createTime", source = "createTime", dateFormat = "yyyy-MM-dd HH:mm:ss")
     @Mapping(target = "updateTime", source = "updateTime", dateFormat = "yyyy-MM-dd HH:mm:ss")
-    ArticleVO transArticles(ArticleDO articleDO);
+    ArticleVO convertArticle(ArticleDO articleDO);
 
-    List<ArticleVO> transArticles(List<ArticleDO> articleDos);
+    List<ArticleVO> convertArticles(List<ArticleDO> list);
 
-    Page<ArticleVO> transArticles(Page<ArticleDO> doPage);
+    Page<ArticleVO> convertArticles(Page<ArticleDO> page);
 
+    ArticleDO convertArticle(ArticleDTO articleDTO);
 
-//    ArticleDO transArticles(ArticleDTO articleDTO);
+    CategoryVO convertCategories(CategoryDO categoryDO);
 
-    CategoryVO transCategories(CategoryDO categoryDO);
+    List<CategoryVO> convertCategories(List<CategoryDO> list);
 
-    List<CategoryVO> transCategories(List<CategoryDO> categoryDos);
+    Page<CategoryVO> convertCategories(Page<CategoryDO> page);
 
-//    CategoryDO transCategories(CategoryDTO categoryDTO);
+    CategoryDO convertCategories(CategoryDTO categoryDTO);
 }

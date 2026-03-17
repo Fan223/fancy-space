@@ -1,14 +1,14 @@
-package fan.fancy.blog.pojo.vo;
+package fan.fancy.blog.pojo.dto;
 
 import lombok.Data;
 
 /**
- * 博客文章展示类.
+ * 博客文章数据传输类.
  *
  * @author Fan
  */
 @Data
-public class ArticleVO {
+public class ArticleDTO {
 
     /**
      * 文章 ID.
@@ -39,14 +39,4 @@ public class ArticleVO {
      * 状态.
      */
     private String status;
-
-    /**
-     * 浏览量.
-     */
-    private String view;
-
-    /**
-     * 更新时间.
-     */
-    private String updateTime;
 }

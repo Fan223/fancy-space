@@ -17,6 +17,10 @@
         </dependency>
         <dependency>
             <groupId>fan</groupId>
+            <artifactId>fancy-log-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>fan</groupId>
             <artifactId>fancy-mybatis-plus-starter</artifactId>
         </dependency>
         <dependency>
@@ -29,8 +33,24 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.github.linpeilie</groupId>
-            <artifactId>mapstruct-plus-spring-boot-starter</artifactId>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <parameters>true</parameters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

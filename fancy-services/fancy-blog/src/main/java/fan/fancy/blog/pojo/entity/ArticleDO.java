@@ -40,4 +40,9 @@ public class ArticleDO extends MetaDO {
      * 状态.
      */
     private Integer status;
+
+    /**
+     * 浏览量.
+     */
+    private Integer view;
 }

@@ -1,6 +1,6 @@
 package fan.fancy.blog.pojo.entity;
 
-import fan.fancy.mybatis.plus.starter.entity.MetaDO;
+import fan.fancy.starter.mybatis.plus.entity.MetaDO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

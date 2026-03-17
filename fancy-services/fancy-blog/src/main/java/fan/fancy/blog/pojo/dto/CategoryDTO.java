@@ -1,17 +1,19 @@
-package fan.fancy.blog.pojo.entity;
+package fan.fancy.blog.pojo.dto;
 
-import fan.fancy.starter.mybatis.plus.entity.MetaDO;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
- * 博客分类实体类.
+ * 博客分类数据传输类.
  *
  * @author Fan
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
-public class CategoryDO extends MetaDO {
+public class CategoryDTO {
+
+    /**
+     * 分类 ID.
+     */
+    private String id;
 
     /**
      * 父分类 ID, 0:顶级分类.

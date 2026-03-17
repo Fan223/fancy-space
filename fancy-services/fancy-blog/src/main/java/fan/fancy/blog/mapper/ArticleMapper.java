@@ -9,5 +9,4 @@ import fan.fancy.blog.pojo.entity.ArticleDO;
  * @author Fan
  */
 public interface ArticleMapper extends BaseMapper<ArticleDO> {
-
 }
