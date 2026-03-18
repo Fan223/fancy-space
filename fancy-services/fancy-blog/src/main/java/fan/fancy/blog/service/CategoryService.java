@@ -16,4 +16,12 @@ public interface CategoryService {
     Page<CategoryDO> page(CategoryQuery query);
 
     List<CategoryDO> list(CategoryQuery query);
+
+    int create(CategoryDO categoryDO);
+
+    int update(CategoryDO categoryDO);
+
+    int deleteById(String id);
+
+    int deleteByIds(List<String> ids);
 }

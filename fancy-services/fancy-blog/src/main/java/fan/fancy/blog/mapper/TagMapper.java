@@ -9,5 +9,4 @@ import fan.fancy.blog.pojo.entity.TagDO;
  * @author Fan
  */
 public interface TagMapper extends BaseMapper<TagDO> {
-
 }

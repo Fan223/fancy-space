@@ -38,26 +38,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public ArticleDO upsert(ArticleDO articleDO) {
-        Long id = articleDO.getId();
-        if (id == null) {
-            return insert(articleDO);
-        }
-
-        ArticleDO exist = articleMapper.selectById(id);
-        if (exist == null) {
-            return insert(articleDO);
-        }
-        return update(articleDO);
-    }
-
-    private ArticleDO insert(ArticleDO articleDO) {
-        articleDO.setCover("https://img.fan223.cn/wallpaper/12.jpg");
-        articleMapper.insert(articleDO);
-        return articleDO;
-    }
-
-    private ArticleDO update(ArticleDO articleDO) {
-        articleMapper.updateById(articleDO);
+        articleMapper.insertOrUpdate(articleDO);
         return articleDO;
     }
 

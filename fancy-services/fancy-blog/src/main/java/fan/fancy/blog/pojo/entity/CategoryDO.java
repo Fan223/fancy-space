@@ -1,5 +1,6 @@
 package fan.fancy.blog.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import fan.fancy.starter.mybatis.plus.entity.MetaDO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,12 +10,13 @@ import lombok.EqualsAndHashCode;
  *
  * @author Fan
  */
+@TableName("category")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class CategoryDO extends MetaDO {
 
     /**
-     * 父分类 ID, 0:顶级分类.
+     * 父分类 ID.
      */
     private Long parentId;
 

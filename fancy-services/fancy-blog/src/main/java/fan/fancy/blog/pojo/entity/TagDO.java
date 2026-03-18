@@ -1,5 +1,6 @@
 package fan.fancy.blog.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import fan.fancy.starter.mybatis.plus.entity.MetaDO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,6 +10,7 @@ import lombok.EqualsAndHashCode;
  *
  * @author Fan
  */
+@TableName("tag")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class TagDO extends MetaDO {

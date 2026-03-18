@@ -16,9 +16,9 @@ public class CategoryDTO {
     private String id;
 
     /**
-     * 父分类 ID, 0:顶级分类.
+     * 父分类 ID.
      */
-    private Long parentId;
+    private String parentId;
 
     /**
      * 分类名称.
@@ -28,10 +28,10 @@ public class CategoryDTO {
     /**
      * 排序.
      */
-    private Integer sortOrder;
+    private String sortOrder;
 
     /**
      * 状态.
      */
-    private Integer status;
+    private String status;
 }

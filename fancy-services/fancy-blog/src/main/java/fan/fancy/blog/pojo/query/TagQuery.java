@@ -5,15 +5,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * 分类查询参数.
+ * 标签查询参数.
  *
  * @author Fan
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class CategoryQuery extends PageQuery {
+public class TagQuery extends PageQuery {
 
     private String name;
-
-    private String status;
 }

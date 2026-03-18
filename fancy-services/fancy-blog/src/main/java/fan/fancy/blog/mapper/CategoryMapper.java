@@ -9,5 +9,4 @@ import fan.fancy.blog.pojo.entity.CategoryDO;
  * @author Fan
  */
 public interface CategoryMapper extends BaseMapper<CategoryDO> {
-
 }
