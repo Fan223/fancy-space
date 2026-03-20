@@ -1,0 +1,42 @@
+package fan.fancy.iam.pojo.dto;
+
+import lombok.Data;
+
+/**
+ * 用户数据传输类.
+ *
+ * @author Fan
+ */
+@Data
+public class UserDTO {
+
+    /**
+     * 用户ID.
+     */
+    private String id;
+
+    /**
+     * 密码.
+     */
+    private String password;
+
+    /**
+     * 昵称.
+     */
+    private String nickname;
+
+    /**
+     * 头像.
+     */
+    private String avatar;
+
+    /**
+     * 生日.
+     */
+    private String birthday;
+
+    /**
+     * 性别 0:女 1:男 2:未知.
+     */
+    private String gender;
+}

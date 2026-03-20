@@ -15,5 +15,6 @@
         <module>fancy-tool</module>
         <module>fancy-resource-navigation</module>
         <module>fancy-dictionary</module>
+        <module>fancy-iam</module>
     </modules>
 </project>
