@@ -1,18 +1,22 @@
 package fan.fancy.iam.controller;
 
-import org.springframework.stereotype.Controller;
+import fan.fancy.iam.converter.IamConverter;
+import fan.fancy.iam.service.PermissionService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <p>
- * 权限表 前端控制器
- * </p>
+ * 权限控制器.
  *
  * @author Fan
- * @since 2026-03-20 16:33:34
  */
-@Controller
-@RequestMapping("/permission")
+@RestController
+@RequestMapping("/iam/permissions")
+@AllArgsConstructor
 public class PermissionController {
 
+    private final PermissionService permissionService;
+
+    private final IamConverter blogConverter;
 }

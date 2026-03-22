@@ -2,6 +2,9 @@ package fan.fancy.iam.pojo.vo;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 菜单展示类.
  *
@@ -54,4 +57,9 @@ public class MenuVO {
      * 排序.
      */
     private String sortOrder;
+
+    /**
+     * 子菜单列表.
+     */
+    private List<MenuVO> children = new ArrayList<>();
 }

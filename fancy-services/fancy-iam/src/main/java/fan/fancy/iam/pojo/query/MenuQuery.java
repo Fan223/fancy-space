@@ -1,6 +1,8 @@
 package fan.fancy.iam.pojo.query;
 
+import fan.fancy.starter.mybatis.plus.query.PageQuery;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 菜单查询参数.
@@ -8,7 +10,8 @@ import lombok.Data;
  * @author Fan
  */
 @Data
-public class MenuQuery {
+@EqualsAndHashCode(callSuper = true)
+public class MenuQuery extends PageQuery {
 
     private String name;
 }

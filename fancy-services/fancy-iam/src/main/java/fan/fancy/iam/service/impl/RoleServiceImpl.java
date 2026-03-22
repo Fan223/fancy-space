@@ -1,20 +1,19 @@
 package fan.fancy.iam.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import entity.Role;
-import mapper.RoleMapper;
+import fan.fancy.iam.mapper.RoleMapper;
+import fan.fancy.iam.service.RoleService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import service.IRoleService;
 
 /**
- * <p>
- * 角色表 服务实现类
- * </p>
+ * 角色接口实现类.
  *
  * @author Fan
- * @since 2026-03-20 16:33:34
  */
 @Service
-public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IRoleService {
+@RequiredArgsConstructor
+public class RoleServiceImpl implements RoleService {
+
+    private final RoleMapper roleMapper;
 
 }

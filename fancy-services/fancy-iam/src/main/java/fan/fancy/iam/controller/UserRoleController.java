@@ -1,18 +1,19 @@
 package fan.fancy.iam.controller;
 
-import org.springframework.stereotype.Controller;
+import fan.fancy.iam.service.UserRoleService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <p>
- * 用户角色关联表 前端控制器
- * </p>
+ * 用户角色关联控制器.
  *
  * @author Fan
- * @since 2026-03-20 16:33:34
  */
-@Controller
-@RequestMapping("/userRole")
+@RestController
+@RequestMapping("/iam/userRoles")
+@AllArgsConstructor
 public class UserRoleController {
 
+    private final UserRoleService userRoleService;
 }

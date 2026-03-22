@@ -1,18 +1,19 @@
 package fan.fancy.iam.controller;
 
-import org.springframework.stereotype.Controller;
+import fan.fancy.iam.service.RolePermissionService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <p>
- * 角色权限关联表 前端控制器
- * </p>
+ * 角色权限关联控制器.
  *
  * @author Fan
- * @since 2026-03-20 16:33:34
  */
-@Controller
-@RequestMapping("/rolePermission")
+@RestController
+@RequestMapping("/iam/rolePermissions")
+@AllArgsConstructor
 public class RolePermissionController {
 
+    private final RolePermissionService rolePermissionService;
 }

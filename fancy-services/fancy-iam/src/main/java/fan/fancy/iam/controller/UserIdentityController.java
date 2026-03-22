@@ -1,18 +1,19 @@
 package fan.fancy.iam.controller;
 
-import org.springframework.stereotype.Controller;
+import fan.fancy.iam.service.UserIdentityService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <p>
- * 用户身份表 前端控制器
- * </p>
+ * 用户身份控制器.
  *
  * @author Fan
- * @since 2026-03-20 16:33:34
  */
-@Controller
-@RequestMapping("/userIdentity")
+@RestController
+@RequestMapping("/iam/userIdentities")
+@AllArgsConstructor
 public class UserIdentityController {
 
+    private final UserIdentityService userIdentityService;
 }
