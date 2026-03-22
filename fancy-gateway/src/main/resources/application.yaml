@@ -8,23 +8,23 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://127.0.0.1:7000
+          issuer-uri: http://127.0.0.1:10100
       client:
         registration:
           fan:
-            provider: authorization-server
+            provider: fancy-authorization-server
             client-id: fancy-gateway
             client-secret: 123456
             authorization-grant-type: authorization_code
             scope: openid,profile,fan
         provider:
-          authorization-server:
-            issuer-uri: http://127.0.0.1:7000
+          fancy-authorization-server:
+            issuer-uri: http://127.0.0.1:10100
   cloud:
     nacos:
-      server-addr: 1.12.253.22:8848
+      server-addr: 127.0.0.1:8848
       username: nacos
-      password: fan223
+      password:
     gateway:
       server:
         webflux:
@@ -32,7 +32,7 @@ spring:
             - TokenRelay
             - StripPrefix=1
           routes:
-            - id: resource
-              uri: lb://resource
+            - id: iam
+              uri: lb://iam
               predicates:
-                - Path=/resource/**
+                - Path=/iam/**
