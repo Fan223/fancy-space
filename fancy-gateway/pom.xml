@@ -12,6 +12,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>fan</groupId>
+            <artifactId>fancy-resource-server-starter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
         </dependency>
@@ -26,11 +32,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>fan</groupId>
-            <artifactId>fancy-resource-server-starter</artifactId>
-            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

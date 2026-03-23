@@ -1,6 +1,7 @@
 package fan.fancy.iam.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import fan.fancy.iam.api.bo.UserBO;
 import fan.fancy.iam.pojo.entity.UserDO;
 
 /**
@@ -10,4 +11,5 @@ import fan.fancy.iam.pojo.entity.UserDO;
  */
 public interface UserMapper extends BaseMapper<UserDO> {
 
+    UserBO selectUser(Long userId);
 }

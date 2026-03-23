@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fan.fancy.iam.mapper.UserMapper">
+
+    <select id="selectUser" resultType="fan.fancy.iam.api.bo.UserBO">
+        SELECT user.id,
+               user.nickname,
+               user.birthday,
+               user.gender,
+               MAX(CASE WHEN ui.identity = 1 THEN ui.identifier END) AS username,
+               MAX(CASE WHEN ui.identity = 2 THEN ui.identifier END) AS phone,
+               MAX(CASE WHEN ui.identity = 3 THEN ui.identifier END) AS email
+        FROM user
+                 LEFT JOIN user_identity ui ON user.id = ui.user_id
+        WHERE user.id = #{userId}
+        GROUP BY user.id;
+    </select>
+</mapper>

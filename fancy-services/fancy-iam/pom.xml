@@ -7,8 +7,13 @@
         <version>${revision}</version>
     </parent>
     <artifactId>fancy-iam</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <name>fancy-iam</name>
+
+    <modules>
+        <module>fancy-iam-api</module>
+        <module>fancy-iam-service</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -39,6 +44,15 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
 
