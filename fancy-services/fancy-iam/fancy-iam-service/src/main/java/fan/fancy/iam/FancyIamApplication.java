@@ -1,9 +1,9 @@
 package fan.fancy.iam;
 
-import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 身份访问管理启动类.
@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan("fan.fancy.iam.mapper")
-@EnableDubbo
+@EnableFeignClients
 public class FancyIamApplication {
     static void main() {
         SpringApplication.run(FancyIamApplication.class);

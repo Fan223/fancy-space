@@ -7,14 +7,14 @@ import fan.fancy.iam.mapper.UserIdentityMapper;
 import fan.fancy.iam.mapper.UserMapper;
 import fan.fancy.iam.pojo.entity.UserIdentityDO;
 import lombok.AllArgsConstructor;
-import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.stereotype.Service;
 
 /**
  * 用户 RPC 接口实现类.
  *
  * @author Fan
  */
-@DubboService
+@Service
 @AllArgsConstructor
 public class UserRpcServiceImpl implements UserRpcService {
 
@@ -23,9 +23,9 @@ public class UserRpcServiceImpl implements UserRpcService {
     private final UserMapper userMapper;
 
     @Override
-    public UserBO getByUsername(String username) {
+    public UserBO getByUsername(String identifier) {
         LambdaQueryWrapper<UserIdentityDO> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(UserIdentityDO::getIdentifier, username);
+        queryWrapper.eq(UserIdentityDO::getIdentifier, identifier);
         UserIdentityDO userIdentityDO = userIdentityMapper.selectOne(queryWrapper);
         return userMapper.selectUser(userIdentityDO.getUserId());
     }

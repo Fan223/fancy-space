@@ -2,8 +2,6 @@ package fan.fancy.iam.api.bo;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 /**
  * 用户业务类.
  *
@@ -13,14 +11,19 @@ import java.time.LocalDateTime;
 public class UserBO {
 
     /**
+     * 用户ID.
+     */
+    private String id;
+
+    /**
+     * 用户名.
+     */
+    private String username;
+
+    /**
      * 密码.
      */
     private String password;
-
-    /**
-     * 昵称.
-     */
-    private String nickname;
 
     /**
      * 头像.
@@ -28,37 +31,27 @@ public class UserBO {
     private String avatar;
 
     /**
+     * 昵称.
+     */
+    private String nickname;
+
+    /**
      * 生日.
      */
-    private LocalDateTime birthday;
+    private String birthday;
 
     /**
      * 性别 0:女 1:男 2:未知.
      */
-    private Integer gender;
+    private String gender;
 
     /**
-     * 用户ID.
+     * 手机号.
      */
-    private Long userId;
+    private String phone;
 
     /**
-     * 身份类型(PHONE/EMAIL/USERNAME/OTHER).
+     * 邮箱.
      */
-    private Byte identity;
-
-    /**
-     * 身份标识(手机号/邮箱/用户名/openid).
-     */
-    private String identifier;
-
-    /**
-     * 凭证(access_token).
-     */
-    private String credential;
-
-    /**
-     * 是否已验证(手机号/邮箱) 0:否 1:是.
-     */
-    private Byte verified;
+    private String email;
 }

@@ -16,9 +16,9 @@ public class UserVO {
     private String id;
 
     /**
-     * 密码.
+     * 用户名.
      */
-    private String password;
+    private String username;
 
     /**
      * 昵称.
@@ -39,4 +39,14 @@ public class UserVO {
      * 性别 0:女 1:男 2:未知.
      */
     private String gender;
+
+    /**
+     * 手机号.
+     */
+    private String phone;
+
+    /**
+     * 邮箱.
+     */
+    private String email;
 }
