@@ -30,9 +30,8 @@ spring:
         webflux:
           default-filters:
             - TokenRelay
-            - StripPrefix=1
           routes:
-            - id: iam
-              uri: lb://iam
+            - id: fancy-iam
+              uri: lb://fancy-iam
               predicates:
                 - Path=/iam/**
