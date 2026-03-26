@@ -1,6 +1,6 @@
 package fan.fancy.iam.api.service;
 
-import fan.fancy.iam.api.bo.UserBO;
+import fan.fancy.iam.api.pojo.bo.UserBO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

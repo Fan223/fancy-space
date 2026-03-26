@@ -1,11 +1,11 @@
 package fan.fancy.iam.rpc;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import fan.fancy.iam.api.bo.UserBO;
+import fan.fancy.iam.api.pojo.bo.UserBO;
+import fan.fancy.iam.api.pojo.entity.UserIdentityDO;
 import fan.fancy.iam.api.service.UserRpcService;
 import fan.fancy.iam.mapper.UserIdentityMapper;
 import fan.fancy.iam.mapper.UserMapper;
-import fan.fancy.iam.pojo.entity.UserIdentityDO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

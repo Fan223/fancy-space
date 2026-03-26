@@ -1,6 +1,9 @@
-package fan.fancy.iam.api.bo;
+package fan.fancy.iam.api.pojo.bo;
 
+import fan.fancy.iam.api.pojo.entity.UserIdentityDO;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * 用户业务类.
@@ -54,4 +57,9 @@ public class UserBO {
      * 邮箱.
      */
     private String email;
+
+    /**
+     * 用户身份列表.
+     */
+    private List<UserIdentityDO> userIdentities;
 }
