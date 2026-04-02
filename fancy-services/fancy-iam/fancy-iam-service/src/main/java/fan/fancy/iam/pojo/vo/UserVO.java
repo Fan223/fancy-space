@@ -2,6 +2,8 @@ package fan.fancy.iam.pojo.vo;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * 用户展示类.
  *
@@ -16,9 +18,9 @@ public class UserVO {
     private String id;
 
     /**
-     * 用户名.
+     * 头像.
      */
-    private String username;
+    private String avatar;
 
     /**
      * 昵称.
@@ -26,9 +28,9 @@ public class UserVO {
     private String nickname;
 
     /**
-     * 头像.
+     * 性别 0:女 1:男 2:未知.
      */
-    private String avatar;
+    private String gender;
 
     /**
      * 生日.
@@ -36,17 +38,7 @@ public class UserVO {
     private String birthday;
 
     /**
-     * 性别 0:女 1:男 2:未知.
+     * 用户身份列表.
      */
-    private String gender;
-
-    /**
-     * 手机号.
-     */
-    private String phone;
-
-    /**
-     * 邮箱.
-     */
-    private String email;
+    private List<UserIdentityVO> userIdentities;
 }

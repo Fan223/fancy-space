@@ -1,6 +1,7 @@
 package fan.fancy.iam.converter;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import fan.fancy.iam.api.pojo.bo.UserBO;
 import fan.fancy.iam.pojo.dto.MenuDTO;
 import fan.fancy.iam.pojo.dto.PermissionDTO;
 import fan.fancy.iam.pojo.dto.RoleDTO;
@@ -29,6 +30,10 @@ import java.util.List;
 public interface IamConverter {
 
     UserVO convertUser(UserDO userDO);
+
+    UserBO convertUserBO(UserDO userDO);
+
+    UserDO convertUserBO(UserBO userBO);
 
     List<UserVO> convertUsers(List<UserDO> list);
 

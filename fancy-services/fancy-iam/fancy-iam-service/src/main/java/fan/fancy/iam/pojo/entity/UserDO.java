@@ -18,9 +18,9 @@ import java.time.LocalDateTime;
 public class UserDO extends MetaDO {
 
     /**
-     * 密码.
+     * 头像.
      */
-    private String password;
+    private String avatar;
 
     /**
      * 昵称.
@@ -28,17 +28,12 @@ public class UserDO extends MetaDO {
     private String nickname;
 
     /**
-     * 头像.
+     * 性别 0:女 1:男 2:未知.
      */
-    private String avatar;
+    private Integer gender;
 
     /**
      * 生日.
      */
     private LocalDateTime birthday;
-
-    /**
-     * 性别 0:女 1:男 2:未知.
-     */
-    private Integer gender;
 }

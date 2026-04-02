@@ -23,24 +23,24 @@ public class UserIdentityDO extends MetaDO {
     private Long userId;
 
     /**
-     * 身份类型 {@link IdentityType}.
+     * 身份类型 0:系统内部身份 1:第三方身份.
+     */
+    private Integer type;
+
+    /**
+     * 身份 {@link IdentityType}.
      */
     private Integer identity;
 
     /**
-     * 身份标识(用户名/手机号/邮箱/openid).
+     * 身份标识(用户名/手机号/邮箱/第三方ID).
      */
     private String identifier;
 
     /**
-     * 凭证(access_token).
+     * 凭证(password/access_token).
      */
     private String credential;
-
-    /**
-     * 是否已验证(手机号/邮箱) 0:否 1:是.
-     */
-    private Integer verified;
 
     @Getter
     @AllArgsConstructor
@@ -49,8 +49,9 @@ public class UserIdentityDO extends MetaDO {
         USERNAME(1),
         PHONE(2),
         EMAIL(3),
-        WECHAT(4),
-        QQ(5);
+        GITHUB(4),
+        WECHAT(5),
+        QQ(6);
 
         private final int code;
     }
