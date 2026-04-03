@@ -3,8 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>fan</groupId>
-        <artifactId>fancy-space</artifactId>
+        <artifactId>fancy-space-parent</artifactId>
         <version>${revision}</version>
+        <relativePath>../fancy-space-parent/pom.xml</relativePath>
     </parent>
     <artifactId>fancy-gateway</artifactId>
     <packaging>jar</packaging>

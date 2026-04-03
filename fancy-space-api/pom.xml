@@ -3,11 +3,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>fan</groupId>
-        <artifactId>fancy-iam</artifactId>
+        <artifactId>fancy-space-parent</artifactId>
         <version>${revision}</version>
+        <relativePath>../fancy-space-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>fancy-iam-api</artifactId>
-    <packaging>jar</packaging>
-    <name>fancy-iam-api</name>
+    <artifactId>fancy-space-api</artifactId>
+    <packaging>pom</packaging>
+    <name>fancy-space-api</name>
+
+    <modules>
+        <module>fancy-iam-api</module>
+    </modules>
 </project>

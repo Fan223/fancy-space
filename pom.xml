@@ -2,13 +2,10 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>fan</groupId>
-        <artifactId>fancy-parent</artifactId>
-        <version>4.0.3</version>
-    </parent>
+
+    <groupId>fan</groupId>
     <artifactId>fancy-space</artifactId>
-    <version>${revision}</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <name>fancy-space</name>
@@ -35,82 +32,7 @@
     <modules>
         <module>fancy-gateway</module>
         <module>fancy-services</module>
+        <module>fancy-space-parent</module>
+        <module>fancy-space-api</module>
     </modules>
-
-    <properties>
-        <revision>1.0.0</revision>
-        <fancy-platform.version>1.0.0</fancy-platform.version>
-    </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-web-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-mybatis-plus-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-redis-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-jackson-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-log-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-validation-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-resource-server-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fan</groupId>
-                <artifactId>fancy-admin-client-starter</artifactId>
-                <version>${fancy-platform.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <parameters>true</parameters>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </path>
-                        <path>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                        </path>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok-mapstruct-binding</artifactId>
-                            <version>0.2.0</version>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

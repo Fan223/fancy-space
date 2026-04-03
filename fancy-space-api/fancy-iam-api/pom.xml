@@ -3,18 +3,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>fan</groupId>
-        <artifactId>fancy-iam</artifactId>
+        <artifactId>fancy-space-api</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>fancy-iam-service</artifactId>
+
+    <artifactId>fancy-iam-api</artifactId>
     <packaging>jar</packaging>
-    <name>fancy-iam-service</name>
+    <name>fancy-iam-api</name>
 
     <dependencies>
         <dependency>
             <groupId>fan</groupId>
-            <artifactId>fancy-iam-api</artifactId>
-            <version>${revision}</version>
+            <artifactId>fancy-mybatis-plus-starter</artifactId>
         </dependency>
     </dependencies>
 </project>
